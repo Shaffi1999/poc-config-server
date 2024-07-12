@@ -3,12 +3,14 @@ spring:
     url: jdbc:sqlserver://localhost:1433;databaseName=inventory_db
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     username: SA
-    password: UGFzc3dvcmRAMTIz
+    password: ${DATABASE_PASSWORD}
 jpa:
   hibernate:
     ddl-auto: update
   show-sql: true
   database-platform: org.hibernate.dialect.SQLServerDialect
+
+DATABSE_PASSWORD: '{cipher}UGFzc3dvcmRAMTIz'
 
 
 logging:
