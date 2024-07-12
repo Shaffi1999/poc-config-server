@@ -8,7 +8,7 @@ jpa:
   hibernate:
     ddl-auto: update
   show-sql: true
-  properties:
+  platform:
     hibernate.dialect: org.hibernate.dialect.SQLServerDialect
 
 eureka:
