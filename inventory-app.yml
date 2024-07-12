@@ -1,14 +1,11 @@
 spring:
-  h2:
-    console:
-      enabled: true
   datasource:
-    url: jdbc:h2:mem:inventory_db
-    driverClassName: org.h2.Driver
-    username: sa
-    password: password
+    url: jdbc:sqlserver://localhost:1433;databaseName=inventorydb
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: SA
+    password: UGFzc3dvcmRAMTIz
 jpa:
-  database-platform: org.hibernate.dialect.H2Dialect
+  database-platform: org.hibernate.dialect.SQLServerDialect
 
 eureka:
   instance:
